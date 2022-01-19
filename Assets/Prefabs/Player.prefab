@@ -97,7 +97,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.044671774, y: -0.04467082}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -108,7 +108,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 5.708545, y: 2.9751186}
+  m_Size: {x: 5.75, y: 3}
   m_EdgeRadius: 0
 --- !u!1 &2593648563202875815
 GameObject:
@@ -155,9 +155,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8296a38d9be241f4e9dd2ad78eb37a28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  joystick: {fileID: 0}
   _playerSprites:
-  - {fileID: 0}
-  _playerSpeed: 3
+  - {fileID: -5792511334730316588, guid: fea82872e95137043986c40b738816ca, type: 3}
+  - {fileID: 40422208409524962, guid: fea82872e95137043986c40b738816ca, type: 3}
+  - {fileID: 1382654831687872026, guid: fea82872e95137043986c40b738816ca, type: 3}
+  - {fileID: -4671057516089923990, guid: fea82872e95137043986c40b738816ca, type: 3}
+  _playerSpeed: 2
+  _bomb: {fileID: 7302851307608989018, guid: 5016c2d1ee0d5834fb8bc4b6d3fde9c4, type: 3}
 --- !u!50 &2593648563202875802
 Rigidbody2D:
   serializedVersion: 4
