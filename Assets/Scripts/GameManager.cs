@@ -20,8 +20,8 @@ public class GameManager : MonoBehaviour
     }
     public void Win()
     {
-        _restartText.color = Color.red;
-        _restartText.text = "You lose!";
+        _restartText.color = Color.green;
+        _restartText.text = "You win!";
         OffMovement();
         Invoke(nameof(RestartGame), 1f);
     }
