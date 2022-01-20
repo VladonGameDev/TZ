@@ -1,11 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-
-public class EnemyControll : MonoBehaviour
+public class EnemyController : MonoBehaviour
 {
+    private GameManager GameManagerScript;
     private GameObject Enemy;
-    private Rigidbody2D EnemyRigidBody;
+    [HideInInspector] public Rigidbody2D EnemyRigidBody;
     private BoxCollider2D EnemyCollider;
     private SpriteRenderer EnemySpriteRenderer;
     private Vector3 dir;
@@ -15,6 +13,7 @@ public class EnemyControll : MonoBehaviour
 
     void Awake()
     {
+        GameManagerScript = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
         Enemy = this.gameObject;
         EnemySpriteRenderer = this.gameObject.GetComponentInChildren<SpriteRenderer>();
         EnemyRigidBody = Enemy.GetComponent<Rigidbody2D>();
@@ -59,5 +58,13 @@ public class EnemyControll : MonoBehaviour
         }
             
         transform.position = Vector3.MoveTowards(transform.position, transform.position + dir, Time.deltaTime);
+    }
+
+    private void OnTriggerEnter2D(Collider2D coll)
+    {
+        if (coll.gameObject.tag == "Bomb")
+        {
+            Destroy(this.gameObject);
+        }
     }
 }
