@@ -8,6 +8,9 @@ TagManager:
   - SpawnPoint
   - Bomb
   - Enemy
+  - WinZone
+  - RestartText
+  - GameManager
   layers:
   - Default
   - TransparentFX
